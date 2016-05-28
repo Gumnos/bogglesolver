@@ -83,7 +83,7 @@ def main(board_name, dict_name="/usr/share/dict/words"):
         print("%i %s at %s" % (
             len(word),
             word,
-            locs,
+            [(x+1, y+1) for x,y in locs],
             ))
 
 if __name__ == "__main__":
