@@ -20,5 +20,9 @@ On Windows with Python pre-installed, it would be invoked as
 Output includes the word-length score, the word, as well as the path to traverse to find the word in question:
 
     5 press at [(2, 2), (3, 1), (4, 1), (4, 2), (3, 3)]
+    3 wet at [(1, 3), (2, 4), (1, 4)]
+    4 went at [(1, 3), (2, 4), (2, 3), (1, 4)]
+    3 new at [(2, 3), (2, 4), (1, 3)]
+    ...
 
-Note that a word may appear multiple times in the output as produced by different paths.
+Be aware that output is unsorted and multiple paths may produce the same word, so the output can include duplicates.
