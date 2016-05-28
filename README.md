@@ -12,6 +12,10 @@ Usage:
     ...
     $ ./boggle.py board.txt upgoer_five_dictionary.txt
     ...
+
+On Windows with Python pre-installed, it would be invoked as
+
+   C:\Temp> python boggle.py board.txt
     
 Output includes the word-length score, the word, as well as the path to traverse to find the word in question:
 
