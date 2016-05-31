@@ -1,5 +1,8 @@
 # bogglesolver
-A solver for various-dimension Boggle™ boards, allowing for an arbitrary dictionary
+A solver for various-dimension Boggle™ boards, allowing for an arbitrary dictionary.
+
+The input board consists of a small NxN text file consisting of the
+letters.  Using "q" will place the "qu".
 
 Usage:
 
@@ -28,9 +31,8 @@ On Windows with Python pre-installed, it would be invoked as
 
     C:\Temp> python boggle.py board.txt valid_words.txt
     
-Output includes the word, the word-length & score, as well as the path to
-traverse to find the word in question:
+Output includes the word, the word-length & score (based on the 4x4 rules),
+as well as the path to traverse to find the word in question:
 
 Be aware that output is unsorted and multiple paths may produce the same word, so the output can include duplicates.
 
-To include the "Qu" tile on the board, simply use a "q".
