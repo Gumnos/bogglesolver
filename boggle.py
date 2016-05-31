@@ -5,6 +5,15 @@ from pprint import pprint
 
 END_OF_WORD = object() # a sentinel
 
+def score(word):
+    if len(word) < 5: return 1
+    return {
+        5: 2,
+        6: 3,
+        7: 5,
+        }.get(len(word), 11)
+
+
 def load_board(fp):
     data = [
         row.rstrip("\r\n")
@@ -80,9 +89,10 @@ def main(board_name, dict_name="/usr/share/dict/words"):
         len(board) ** 2, # capped by the board-size
         )
     for word, locs in solve(board, dictionary):
-        print("%i %s at %s" % (
-            len(word),
+        print("%s (length: %i, score: %i) at %s" % (
             word,
+            len(word),
+            score(word),
             [(x+1, y+1) for x,y in locs],
             ))
 
