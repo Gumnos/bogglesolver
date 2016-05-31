@@ -32,3 +32,5 @@ Output includes the word, the word-length & score, as well as the path to
 traverse to find the word in question:
 
 Be aware that output is unsorted and multiple paths may produce the same word, so the output can include duplicates.
+
+To include the "Qu" tile on the board, simply use a "q".

@@ -16,7 +16,7 @@ def score(word):
 
 def load_board(fp):
     data = [
-        row.rstrip("\r\n")
+        ['qu' if c == 'q' else c for c in row.rstrip("\r\n")]
         for row
         in fp
         ]
@@ -44,9 +44,11 @@ def search(board, dictionary,
         x, y,
         used, # set of (x,y) pairs already used
         ):
-    c = board[y][x]
+    c = board[y][x][:1]
     if c in dictionary:
         new_dict = dictionary[c]
+        if c == 'q':
+            new_dict = new_dict.get('u', {})
         if END_OF_WORD in new_dict:
             yield [(x,y)]
         size = len(board)
